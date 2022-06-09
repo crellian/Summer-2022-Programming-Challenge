@@ -31,3 +31,5 @@ Approach 2: 6.5s
 Run a sentiment analysis on each paragraph. Take the average of the scores. \
 Also run sentiment analyses on title and subheading. \
 Final Score = 0.3 * score of title + 0.3 * score of subheading + 0.4 * average of paragraphs
+## Result
+![Alt text](flair-result.png?raw=true "Title")
