@@ -33,3 +33,4 @@ Also run sentiment analyses on title and subheading. \
 Final Score = 0.3 * score of title + 0.3 * score of subheading + 0.4 * average of contents
 ## Result
 ![Alt text](flair-result.png?raw=true "Title")
+![Alt text](google-result.png?raw=true "Title")
