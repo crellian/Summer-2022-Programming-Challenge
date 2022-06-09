@@ -27,8 +27,8 @@ Approach 2 (flair): 6.5s
 4. Parse received articles and remove unrelevent texts with regex
 5. Save to a json file
 ## Sentiment Analysis 
-#### Approach 1: Sentiment Analysis from Google Cloud Natural Language API (online, faster)
-#### Approach 2: Flair (offline, slower)
+#### Approach 1: Sentiment Analysis from Google Cloud Natural Language API (online)
+#### Approach 2: Flair (offline)
 Run a sentiment analysis on each paragraph. Take the average of the scores. \
 Also run sentiment analyses on title and subheading. \
 Final Score = 0.2 * score of title + 0.1 * score of subheading + 0.7 * average of contents
