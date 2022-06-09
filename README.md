@@ -30,6 +30,9 @@ Approach 2: 6.5s
 #### Approach 2: Flair (offline, slower)
 Run a sentiment analysis on each paragraph. Take the average of the scores. \
 Also run sentiment analyses on title and subheading. \
-Final Score = 0.3 * score of title + 0.3 * score of subheading + 0.4 * average of contents
+Final Score = 0.2 * score of title + 0.1 * score of subheading + 0.7 * average of contents
 ## Result
+### Flair
 ![Alt text](flair-result.png?raw=true "Title")
+### Google
+![Alt text](google-result.png?raw=true "Title")
