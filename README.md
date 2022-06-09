@@ -14,7 +14,7 @@
     └── ...
 ### Running A Test
 To collect news articles: `python news_scraping.py` \
-To do a google sentiment analysis: `python sentiment.py` (requires internet access) \
+To do a google sentiment analysis: `python sentiment_google.py` (requires internet access) \
 To do an offline sentiment analysis: `python sentiment.py` 
 #### Expected operation time
 Approach 1 (google): 49s \
