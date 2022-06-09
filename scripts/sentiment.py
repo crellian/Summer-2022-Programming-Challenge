@@ -1,5 +1,5 @@
 import os
-from google.cloud import language_v1
+#from google.cloud import language_v1
 from flair.models import TextClassifier
 from flair.data import Sentence
 from tqdm import tqdm
@@ -9,7 +9,7 @@ import json
 import re
 import time
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '../credential/japanese-ocr-337002-9b078adb6791.json'
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '../credential/japanese-ocr-337002-9b078adb6791.json'
 sia = TextClassifier.load('en-sentiment')
 
 def isEnglish(l):
@@ -25,7 +25,7 @@ def countSentence(l):
     for d in l:
         count += len(d['article'])
     return count
-
+'''
 def analyze_sentiment(text_content):
     client = language_v1.LanguageServiceClient()
     type_ = language_v1.Document.Type.PLAIN_TEXT
@@ -34,7 +34,7 @@ def analyze_sentiment(text_content):
     response = client.analyze_sentiment(request = {'document': document})
     
     return response.document_sentiment.score
-
+'''
 def analyze_sentiment_(text_content):
     sentence = Sentence(text_content)
     sia.predict(sentence)
@@ -58,11 +58,13 @@ scores = []
 start  = time.time()
 
 for text in news:
+    title_score  = analyze_sentiment_(text["title"])
+    subhead_score = analyze_sentiment_(text["subhead"])
     para_score = []
     for para in text["article"]:
         para_score.append(analyze_sentiment_(para))
         pbar.update(1)
-    scores.append(sum(para_score)/len(para_score))
+    scores.append(0.3 * title_score + 0.3 * subhead_score + 0.4 * sum(para_score)/len(para_score))
 print("Program Execution Time: "+str(time.time()-start)+" seconds. "+str(count)+" paragraphs has been analyzed")
 
 #Visualization
