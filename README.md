@@ -17,7 +17,7 @@ To collect news articles: `python scripts/news_scraping.py` \
 To do a basic sentiment analysis: `python scripts/sentiment.py`
 #### Expected operation time
 Approach 1: 49s (requires internet access) \
-Approach 2: 702s
+Approach 2: 6.5s
 
 ## Web Scraping
 1. Make a request to the news site homepage with package 'requests'
