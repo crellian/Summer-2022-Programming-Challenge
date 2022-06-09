@@ -58,7 +58,7 @@ for url in urls:
     data['article'] = article   
     news.append(data)
 
-with open('../news.json', 'w') as f:
+with open('./news.json', 'w') as f:
     json.dump(news, f, indent=4)
     
 
