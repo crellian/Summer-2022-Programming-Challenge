@@ -13,11 +13,12 @@
     │          └── ...                
     └── ...
 ### Running A Test
-To collect news articles: `python scripts/news_scraping.py` \
-To do a basic sentiment analysis: `python scripts/sentiment.py`
+To collect news articles: `python news_scraping.py` \
+To do a google sentiment analysis: `python sentiment.py` (requires internet access) \
+To do an offline sentiment analysis: `python sentiment.py` 
 #### Expected operation time
-Approach 1: 49s (requires internet access) \
-Approach 2: 6.5s
+Approach 1 (google): 49s \
+Approach 2 (flair): 6.5s
 
 ## Web Scraping
 1. Make a request to the news site homepage with package 'requests'
